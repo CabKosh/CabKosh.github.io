@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services | Moolah-lah Fundraising</title>
+    <p><em>Click a fundraiser to learn more</em></p>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1><strong>Moolah-lah Fundraising</strong></h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><strong>Home</strong></a></li>
+            <li><a href="services.html"><strong>Services</strong></a></li>
+            <li><a href="how-it-works.html"><strong>How It Works</strong></a></li>
+            <li><a href="fundraiser.html"><strong>Start Fundraiser</strong></a></li>
+            <li><a href="contact.html"><strong>Contact</strong></a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page">
+
+<section class="services">
+    <h2><u><strong>Our Fundraising Services</strong></u></h2>
+
+    <div class="center-row">
+
+        <div class="card" onclick="openPopup('fun')">
+            <img src="fun-run.jpg" alt="Fun Run">
+            <p><strong>Fun Run</strong></p>
+        </div>
+
+        <div class="card" onclick="openPopup('color')">
+            <img src="color-run.jpg" alt="Color Run">
+            <p><strong>Color Run</strong></p>
+        </div>
+
+        <div class="card" onclick="openPopup('bubble')">
+            <img src="bubble-run.jpg" alt="Bubble Run">
+            <p><strong>Bubble Run</strong></p>
+        </div>
+
+    </div>
+</section>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span onclick="closePopup()" class="close-btn">&times;</span>
+        <p id="popup-text"></p>
+    </div>
+</div>
+
+</main>
+
+<footer>
+    <p><strong>&copy; 2026 Moolah-lah Fundraising</strong></p>
+</footer>
+
+<script>
+function openPopup(type) {
+    let text = "";
+
+    if (type === "fun") {
+        text = "Fun Runs are active fundraising events where students collect donations and run laps to raise money for their school.";
+    } 
+    else if (type === "color") {
+        text = "Color Runs are exciting events where students run while being covered in colorful powder, making fundraising fun and memorable.";
+    } 
+    else if (type === "bubble") {
+        text = "Bubble Runs create a playful experience where students run through foam stations while raising funds for school programs.";
+    }
+
+    document.getElementById("popup-text").innerText = text;
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
