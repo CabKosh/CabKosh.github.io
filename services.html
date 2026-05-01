@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Moolah-lah Fundraising</title>
-    <p><em>Click a fundraiser to learn more</em></p>
+    <meta name="description" content="School fundraising services including fun runs, color runs, and event planning support.">
+    <meta name="keywords" content="fundraising, schools, fun run, color run, education">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,35 +18,131 @@
         <ul>
             <li><a href="index.html"><strong>Home</strong></a></li>
             <li><a href="services.html"><strong>Services</strong></a></li>
-            <li><a href="how-it-works.html"><strong>How It Works</strong></a></li>
             <li><a href="fundraiser.html"><strong>Start Fundraiser</strong></a></li>
             <li><a href="contact.html"><strong>Contact</strong></a></li>
-            <li><a href="about.html"><strong>About</strong></a></li>
-            <li><a href="faq.html"><strong>Resources</strong></a></li>
         </ul>
     </nav>
 </header>
 
 <main class="page">
 
-<section class="services">
+<!-- SERVICES SECTION -->
+<section>
     <h2><u><strong>Our Fundraising Services</strong></u></h2>
+    <p><em>Click a fundraiser to learn more about each event</em></p>
 
     <div class="center-row">
 
         <div class="card" onclick="openPopup('fun')">
-            <img src="fun-run.jpg" alt="Fun Run">
+            <img src="fun-run.jpg" alt="Kids participating in a fun run">
             <p><strong>Fun Run</strong></p>
         </div>
 
         <div class="card" onclick="openPopup('color')">
-            <img src="color-run.jpg" alt="Color Run">
+            <img src="color-run.jpg" alt="Kids participating in a color run">
             <p><strong>Color Run</strong></p>
         </div>
 
         <div class="card" onclick="openPopup('bubble')">
-            <img src="bubble-run.jpg" alt="Bubble Run">
+            <img src="bubble-run.jpg" alt="Kids running through bubbles">
             <p><strong>Bubble Run</strong></p>
+        </div>
+
+    </div>
+
+    <p>
+        Our fundraising programs are designed to be engaging, easy to manage, and highly effective for schools.
+        Each event is structured to maximize participation while minimizing the workload for school staff.
+    </p>
+</section>
+
+<!-- HOW IT WORKS SECTION -->
+<section>
+    <h2><u><strong>How It Works</strong></u></h2>
+
+    <div class="center-row">
+
+        <div class="card">
+            <h3><strong>1. Sign Up</strong></h3>
+            <p>Schools submit their information and fundraising goals through our platform.</p>
+        </div>
+
+        <div class="card">
+            <h3><strong>2. Plan Your Event</strong></h3>
+            <p>We help organize the fundraiser, including scheduling, promotion, and logistics.</p>
+        </div>
+
+        <div class="card">
+            <h3><strong>3. Launch & Raise Funds</strong></h3>
+            <p>Students participate, donations are collected, and progress is tracked in real time.</p>
+        </div>
+
+    </div>
+
+    <p>
+        Our step-by-step system ensures that schools can run successful fundraising events without
+        needing prior experience or additional staff resources.
+    </p>
+</section>
+
+<table class="funding-table">
+    <thead>
+        <tr>
+            <th>Fundraiser Type</th>
+            <th>Duration</th>
+            <th>Average Funds Raised</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Fun Run</td>
+            <td>10 Day</td>
+            <td>$5,000 - $15,000</td>
+        </tr>
+
+        <tr>
+            <td>Color Run</td>
+            <td>10 Day</td>
+            <td>$10,000 - $30,000</td>
+        </tr>
+
+        <tr>
+            <td>Bubble Run</td>
+            <td>10 Day</td>
+            <td>$15,000 - $35,000</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- RESOURCES SECTION -->
+<section>
+    <h2><u><strong>Resources & Support</strong></u></h2>
+
+    <div class="center-row">
+
+        <div class="card">
+            <h3><strong>Frequently Asked Questions</strong></h3>
+            <p><strong>Who can use this service?</strong></p>
+            <p>Any school looking to improve fundraising results.</p>
+
+            <p><strong>Do we need experience?</strong></p>
+            <p>No, we guide you through every step.</p>
+        </div>
+
+        <div class="card">
+            <h3><strong>Getting Started</strong></h3>
+            <p>
+                Visit the Start Fundraiser page and submit your information.
+                We will customize a fundraising plan based on your goals.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3><strong>Ongoing Support</strong></h3>
+            <p>
+                Our team provides support throughout your event, ensuring everything runs smoothly.
+            </p>
         </div>
 
     </div>
@@ -58,6 +156,10 @@
     </div>
 </div>
 
+<a href="https://www.google.com/search?q=school+fundraising+ideas" target="_blank">
+    Explore Fundraising Ideas
+</a>
+
 </main>
 
 <footer>
@@ -69,13 +171,13 @@ function openPopup(type) {
     let text = "";
 
     if (type === "fun") {
-        text = "Fun Runs are active fundraising events where students collect donations and run laps to raise money for their school.";
+        text = "Fun Runs are active fundraising events where students collect donations and run laps to raise money.";
     } 
     else if (type === "color") {
-        text = "Color Runs are exciting events where students run while being covered in colorful powder, making fundraising fun and memorable.";
+        text = "Color Runs are exciting events where students are covered in colorful powder while fundraising.";
     } 
     else if (type === "bubble") {
-        text = "Bubble Runs create a playful experience where students run through foam stations while raising funds for school programs.";
+        text = "Bubble Runs create a fun experience where students run through foam stations.";
     }
 
     document.getElementById("popup-text").innerText = text;
